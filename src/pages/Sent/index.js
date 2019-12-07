@@ -5,7 +5,7 @@ import { Container, Title, Form, SentButton, Wrapper, ContentSep, List, WriteBut
 
 import api from "../../services/api";
 
-class Inbox extends Component {
+class Sent extends Component {
   state = {
     session: {},
     mails: []
@@ -16,9 +16,9 @@ class Inbox extends Component {
     this.props.history.push('/write');
   }
 
-  handleSentButton = async e => {
+  handleInboxButton = async e => {
     e.preventDefault();
-    this.props.history.push('/sent');
+    this.props.history.push('/inbox')
   }
 
   async componentDidMount() {
@@ -29,8 +29,8 @@ class Inbox extends Component {
       const JsonSession = JSON.parse(session);
       this.setState({ session: JsonSession });
 
-      const sent = await api.post('/mailReceiver', {
-        to: JsonSession["user"]["email"]
+      const sent = await api.post('/mailSender', {
+        from: JsonSession["user"]["email"]
       });
       this.setState({mails: sent.data})
       //console.log(this.state);
@@ -56,14 +56,14 @@ class Inbox extends Component {
               </h2>
             </WriteButton>
           </Form>
-          <Form>
+          <Form onSubmit={this.handleInboxButton}>
             <ReceivedButton>
               <h3>
                 <MdInbox size={25}/> <p>Received</p>
               </h3>
             </ReceivedButton>
           </Form>
-          <Form onSubmit={this.handleSentButton}>
+          <Form>
             <SentButton>
               <h4>
                 <MdSend size={25}/> <p>Sent</p>
@@ -86,4 +86,4 @@ class Inbox extends Component {
   }
 }
 
-export default withRouter(Inbox);
+export default withRouter(Sent);

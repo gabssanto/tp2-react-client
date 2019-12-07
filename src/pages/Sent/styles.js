@@ -91,11 +91,8 @@ export const ReceivedButton = styled.button.attrs({
   border: 2px solid #fff;
   padding: 15px 0;
   border-radius: 4px;
-  border: 2px solid rgb(241,101,34);
-
 
   h3 {
-    color: rgb(241,101,34);
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -117,8 +114,10 @@ export const SentButton = styled.button.attrs({
   border: 2px solid #fff;
   padding: 15px 0;
   border-radius: 4px;
+  border: 2px solid rgb(241,101,34);
 
   h4 {
+    color: rgb(241,101,34);
     font-size: 20px;
     display: flex;
     flex-direction: row;

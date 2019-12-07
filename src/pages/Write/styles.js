@@ -54,6 +54,17 @@ export const Form = styled.form`
   display: flex;
   flex:1;
   flex-direction: column;
+
+  input {
+    flex: 1;
+    border: 1px solid rgb(241,101,34);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
 `;
 
 export const WriteButton = styled.button.attrs({
@@ -91,11 +102,9 @@ export const ReceivedButton = styled.button.attrs({
   border: 2px solid #fff;
   padding: 15px 0;
   border-radius: 4px;
-  border: 2px solid rgb(241,101,34);
 
 
   h3 {
-    color: rgb(241,101,34);
     font-size: 20px;
     display: flex;
     flex-direction: row;
@@ -131,32 +140,117 @@ export const SentButton = styled.button.attrs({
   }
 `;
 
-export const List = styled.ul`
-  list-style: none;
+export const List = styled.div`
   margin-top: 1%;
   margin-right: 2%;
   margin-left: 2%;
   max-width: 1000px;
   background-color: #fff;
-  color: #999;
+  color: #333;
   flex: 5;
   box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
   border-radius: 4px;
   padding: 0.3% 1%;
+`;
 
-  li {
-    padding: 15px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    & + li {
-      border-top: 1px solid #eee;
-    }
-    a {
-      color: rgb(241,101,34);
-      text-decoration: none;
-      size: 20px;
-    }
+export const FromToWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const Forms = styled.form`
+  font-size: 20px;
+  flex: 1;
+`;
+
+export const From = styled.div`
+  padding: 1% 1%;
+  font-size: 20px;
+  flex: 1;
+
+  input {
+    border: 1px solid rgb(241,101,34);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 2%;
+    min-width: 80%;
   }
+
+`;
+
+export const To = styled.div`
+  padding: 1% 1%;
+  font-size: 20px;
+  flex: 1;
+
+  input {
+    border: 1px solid rgb(241,101,34);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 2%;
+    min-width: 98%;
+  }
+
+`;
+
+export const Subject = styled.div`
+  padding: 1% 1%;
+  font-size: 20px;
+  flex: 1;
+
+  input {
+    border: 1px solid rgb(241,101,34);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 2%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+  }
+
+`;
+
+export const TextArea = styled.div`
+  padding: 1% 1%;
+  font-size: 20px;
+  flex: 1;
+
+  textarea {
+    border: 1px solid rgb(241,101,34);
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 2%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    min-width: 100%;
+  }
+
+`;
+
+export const SubmitButton = styled.button.attrs({
+  type: 'submit'
+})`
+  background-color: rgb(241,101,34);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+  margin-bottom: 1%;
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+
+  h5 {
+    font-size: 20px;
+  }
+
 `;

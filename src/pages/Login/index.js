@@ -27,7 +27,6 @@ class Login extends Component {
     const response = await api.post('/sessions', {
       email, password
     });
-    console.log(response.data);
     localStorage.setItem('session', JSON.stringify(response.data));
     this.props.history.push('/inbox');
   }

@@ -26,11 +26,14 @@ class Register extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    const { name, email, password } = this.state;
-
+    const { name, password } = this.state;
+    var {email} = this.state;
+    email += '@meuss.com';
     const response = await api.post('/users', {
       name, email, password
     });
+
+    console.log(response.data);
 
     this.props.history.push('/');
   }
@@ -49,7 +52,7 @@ class Register extends Component {
             onChange={this.handleNameChange}
           />
           <input
-            placeholder='email'
+            placeholder='nickname'
             type='text'
             value={email}
             onChange={this.handleEmailChange}
