@@ -33,6 +33,8 @@ class Sent extends Component {
         from: JsonSession["user"]["email"]
       });
       this.setState({mails: sent.data})
+      localStorage.setItem('mails', JSON.stringify(this.state.mails));
+
       //console.log(this.state);
 
     }
@@ -76,7 +78,7 @@ class Sent extends Component {
             <li key={index}>
               <p><strong>Subject:</strong> {mail.subject}</p>
               <p><strong>To:</strong> {mail.to}</p>
-              <Link to={`sent/${encodeURIComponent(mail.id)}`}><MdForward size={25}/></Link>
+              <Link to={`inbox/${encodeURIComponent(mail.id)}`}><MdForward size={25}/></Link>
             </li>
           ))}
         </List>

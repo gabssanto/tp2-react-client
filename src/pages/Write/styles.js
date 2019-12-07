@@ -169,14 +169,25 @@ export const From = styled.div`
   flex: 1;
 
   input {
-    border: 1px solid rgb(241,101,34);
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 14px;
     margin-left: 2%;
     min-width: 80%;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
   }
 
+  input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(241,101,34);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(241,101,34);
+  }
 `;
 
 export const To = styled.div`
@@ -185,12 +196,24 @@ export const To = styled.div`
   flex: 1;
 
   input {
-    border: 1px solid rgb(241,101,34);
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 14px;
     margin-left: 2%;
-    min-width: 98%;
+    min-width: 91%;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(241,101,34);
+    padding: 10px 15px;
+    margin-left: 2%;
+    border: 1px solid rgb(241,101,34);
   }
 
 `;
@@ -201,7 +224,6 @@ export const Subject = styled.div`
   flex: 1;
 
   input {
-    border: 1px solid rgb(241,101,34);
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 14px;
@@ -210,6 +232,20 @@ export const Subject = styled.div`
     margin-left: auto;
     margin-right: auto;
     min-width: 100%;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(241,101,34);
+    padding: 10px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(241,101,34);
   }
 
 `;
@@ -220,7 +256,6 @@ export const TextArea = styled.div`
   flex: 1;
 
   textarea {
-    border: 1px solid rgb(241,101,34);
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 14px;
@@ -230,6 +265,21 @@ export const TextArea = styled.div`
     margin-right: auto;
     resize: none;
     min-width: 100%;
+
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+  }
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgb(241,101,34);
+    padding: 10px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(241,101,34);
   }
 
 `;
