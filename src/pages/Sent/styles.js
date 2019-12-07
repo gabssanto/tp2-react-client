@@ -152,6 +152,9 @@ export const List = styled.ul`
     & + li {
       border-top: 1px solid #eee;
     }
+    p {
+      min-width: 40%;
+    }
     a {
       color: rgb(241,101,34);
       text-decoration: none;

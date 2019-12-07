@@ -33,6 +33,7 @@ class Inbox extends Component {
         to: JsonSession["user"]["email"]
       });
       this.setState({mails: sent.data})
+      localStorage.setItem('mails', JSON.stringify(this.state.mails));
       //console.log(this.state);
 
     }
@@ -75,8 +76,8 @@ class Inbox extends Component {
           {mailsReverse.map((mail, index) => (
             <li key={index}>
               <p><strong>Subject:</strong> {mail.subject}</p>
-              <p><strong>To:</strong> {mail.to}</p>
-              <Link to={`sent/${encodeURIComponent(mail.id)}`}><MdForward size={25}/></Link>
+              <p><strong>From:</strong> {mail.from}</p>
+              <Link to={`inbox/${encodeURIComponent(mail.id)}`}><MdForward size={25}/></Link>
             </li>
           ))}
         </List>
